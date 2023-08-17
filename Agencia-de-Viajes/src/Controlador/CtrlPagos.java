@@ -8,6 +8,8 @@ import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.table.DefaultTableModel;
 import oracle.jdbc.OracleTypes;
@@ -20,6 +22,7 @@ public class CtrlPagos implements ActionListener {
     //Variables
     private final frmPagos frmp;
     private final Pagar p;
+    private static final Logger logger = Logger.getLogger(CtrlCliente.class.getName());
 
   /**
    *
@@ -40,6 +43,7 @@ public class CtrlPagos implements ActionListener {
     public void Listar() {
         frmp.tblReservas.setDefaultRenderer(Object.class, new Render());
         DefaultTableModel md = new DefaultTableModel() {
+            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -64,7 +68,7 @@ public class CtrlPagos implements ActionListener {
 
             frmp.tblReservas.setModel(md);
         } catch (Exception e) {
-            System.out.println(e);
+             logger.log(Level.SEVERE, "Error en Listar", e);
         }
     }
   /**
@@ -72,7 +76,10 @@ public class CtrlPagos implements ActionListener {
    * @param e
    */
   @Override
-    public void actionPerformed(ActionEvent e) {
-    }
+  public void actionPerformed(ActionEvent e) {
+      // Este método está vacío ya que actualmente no se ha implementado ninguna acción
+      // para el evento ActionListener. 
+      throw new UnsupportedOperationException("Método no implementado");
+  }
     
 }

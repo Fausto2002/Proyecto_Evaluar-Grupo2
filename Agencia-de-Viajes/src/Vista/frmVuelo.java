@@ -75,6 +75,7 @@ public class frmVuelo extends javax.swing.JFrame {
             }
         ));
         tblVuelo.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblVueloMouseClicked(evt);
             }
@@ -93,9 +94,11 @@ public class frmVuelo extends javax.swing.JFrame {
             }
         });
         txtBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyReleased(evt);
             }
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyTyped(evt);
             }
@@ -183,6 +186,7 @@ public class frmVuelo extends javax.swing.JFrame {
         txtEscala.setBackground(new java.awt.Color(204, 204, 204));
         txtEscala.setBorder(null);
         txtEscala.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtEscalaKeyTyped(evt);
             }
@@ -192,6 +196,7 @@ public class frmVuelo extends javax.swing.JFrame {
         txtOrigen.setBackground(new java.awt.Color(204, 204, 204));
         txtOrigen.setBorder(null);
         txtOrigen.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtOrigenKeyTyped(evt);
             }
@@ -206,6 +211,7 @@ public class frmVuelo extends javax.swing.JFrame {
             }
         });
         txtDestino.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtDestinoKeyTyped(evt);
             }
@@ -309,7 +315,6 @@ public class frmVuelo extends javax.swing.JFrame {
     }//GEN-LAST:event_txtOrigenKeyTyped
 
     private void txtDestinoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDestinoActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtDestinoActionPerformed
 
     private void txtDestinoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDestinoKeyTyped
@@ -321,7 +326,6 @@ public class frmVuelo extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEscalaKeyTyped
 
     private void txtBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBusquedaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtBusquedaActionPerformed
 
     private void txtBusquedaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBusquedaKeyReleased

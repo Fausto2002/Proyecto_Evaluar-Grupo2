@@ -1,11 +1,14 @@
 package Controlador;
 
 import java.sql.*;
+import java.util.logging.Level;
+
 import Modelo.*;
 import Vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 /**
@@ -18,6 +21,7 @@ public class CtrlHotel implements ActionListener {
     private final ConsultasHotel modH;
     private final frmHotel frmH;
     private final frmModHotel frmMod;
+    private static final Logger logger = Logger.getLogger(CtrlCliente.class.getName());
   /**
    * metodo constructor
    * @param mod
@@ -47,7 +51,7 @@ public class CtrlHotel implements ActionListener {
    * @return
    */
     public static boolean validarCedulatelefono(String telefono) {
-        String regex = "^[0-9]{10}$";
+        String regex = "\\d";
         return telefono.matches(regex);
     }
 
@@ -122,6 +126,7 @@ public class CtrlHotel implements ActionListener {
     public void Listar() {
         frmH.tblHotel.setDefaultRenderer(Object.class, new Render());
         DefaultTableModel md = new DefaultTableModel() {
+            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -140,7 +145,7 @@ public class CtrlHotel implements ActionListener {
                 frmH.tblHotel.setModel(md);
             }
         } catch (Exception e) {
-            System.out.println(e);
+            logger.log(Level.SEVERE, "Error en Listar", e);
         }
     }
 }

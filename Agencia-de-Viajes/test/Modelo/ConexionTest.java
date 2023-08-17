@@ -28,18 +28,14 @@ public class ConexionTest {
   @Test
     public void testGetConnection() throws SQLException{
         try {
-            //Driver jdbc para establecer la conexion
+            // Driver jdbc para establecer la conexión
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe","Proyecto","123456");
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/xe", "Proyecto", "123456");
             conn.setAutoCommit(false);
-            
-            if(conn!=null){
-                System.out.println("Conexion Exitosa");
-            }else{
-                System.out.println("Conexion Erronea");
-            }
+    
+            System.out.println("Conexión Exitosa");
         } catch (ClassNotFoundException e) {
-            JOptionPane.showMessageDialog(null, "Conexion Erronea" + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Conexión Erronea" + e.getMessage());
         }
     }
 }

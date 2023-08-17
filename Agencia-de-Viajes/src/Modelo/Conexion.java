@@ -3,60 +3,56 @@ package Modelo;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Grupo E
  */
-public class Conexion 
-{
-    private static Connection conn =null;
-    private static final String login = "Proyecto";//Usuario de la Base de Datos
-    private static final String password = "123456";//Contraseña de la Base de Datos
-    private static final String url = "jdbc:oracle:thin:@//localhost:1521/xe";//url conexion a la base de Datos llamada "Proyecto"
-    //jdbc:oracle:thin:@//localhost:1522/XE
+public class Conexion {
+    private static Connection conn = null;
+    private static final String login = "Proyecto";// Usuario de la Base de Datos
+    private static final String password = "123456";// Contraseña de la Base de Datos
+    private static final String url = "jdbc:oracle:thin:@//localhost:1521/xe";// url conexion a la base de Datos llamada
+                                                                              // "Proyecto"
+    // jdbc:oracle:thin:@//localhost:1522/XE
 
-  /**
-   *
-   * @return
-   */
-    public static Connection getConnection(){
-        
+    /**
+     *
+     * @return
+     */
+    public static Connection getConnection() {
+
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");//Driver jdbc para establecer la conexion
-            conn = DriverManager.getConnection(url,login,password);
+            conn = DriverManager.getConnection(url, login, password);
             conn.setAutoCommit(false);
-            
-            if(conn!=null){
-                System.out.println("Conexion Exitosa");
-            }else{
-                System.out.println("Conexion Erronea");
-            }
-        } catch (ClassNotFoundException|SQLException e) {
-            JOptionPane.showMessageDialog(null, "Conexion Erronea" + e.getMessage());
-        
+
+            Logger.getLogger(Conexion.class.getName()).log(Level.INFO, "Conexión Exitosa");
+
+        } catch (SQLException e) {
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, "Error de conexión: {0}", e.getMessage());
         }
+
         return conn;
     }
-    
-  /**
-   * mensaje si ocurre error de coneccion
-   */
-  public void desconexion(){
+
+    /**
+     * mensaje si ocurre error de coneccion
+     */
+    public void desconexion() {
         try {
             conn.close();
         } catch (Exception e) {
-            System.out.println("Error al desconectar "+ e.getMessage());
+            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, "Error al desconectar", e);
         }
     }
-    
-  /**
-   *
-   * @param args
-   */
-  public static void main(String[] args) {
-        Conexion c=new Conexion();
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
         Conexion.getConnection();
     }
 }

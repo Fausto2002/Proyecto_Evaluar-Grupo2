@@ -1,6 +1,9 @@
 package Controlador;
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import Modelo.*;
 import Vista.*;
 import java.awt.event.ActionEvent;
@@ -20,6 +23,7 @@ public class CtrlVuelo implements ActionListener {
     private final ConsultasVuelo modV;
     private final frmVuelo frmV;
     private final frmModVuelo frmMod;
+    private static final Logger logger = Logger.getLogger(CtrlCliente.class.getName());
 
     //metodo constructor
 
@@ -137,6 +141,7 @@ public class CtrlVuelo implements ActionListener {
   public void Listar() {
         frmV.tblVuelo.setDefaultRenderer(Object.class, new Render());
         DefaultTableModel md = new DefaultTableModel() {
+            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -156,7 +161,7 @@ public class CtrlVuelo implements ActionListener {
                 frmV.tblVuelo.setModel(md);
             }
         } catch (Exception e) {
-            System.out.println(e);
+            logger.log(Level.SEVERE, "Error en Listar", e);
         }
     }
 }

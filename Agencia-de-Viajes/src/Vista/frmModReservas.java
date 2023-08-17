@@ -71,6 +71,7 @@ public class frmModReservas extends javax.swing.JFrame {
 
         txtIdReserva.setEnabled(false);
         txtIdReserva.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIdReservaKeyTyped(evt);
             }
@@ -79,6 +80,7 @@ public class frmModReservas extends javax.swing.JFrame {
 
         txtCliente.setEnabled(false);
         txtCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtClienteKeyTyped(evt);
             }
@@ -92,6 +94,7 @@ public class frmModReservas extends javax.swing.JFrame {
             }
         });
         txtcedula.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtcedulaKeyTyped(evt);
             }
@@ -114,6 +117,7 @@ public class frmModReservas extends javax.swing.JFrame {
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 50, 20));
 
         txtHabitaciones.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtHabitacionesKeyTyped(evt);
             }
@@ -131,6 +135,7 @@ public class frmModReservas extends javax.swing.JFrame {
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 60, 20));
 
         txtPersonas.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPersonasKeyTyped(evt);
             }
@@ -150,6 +155,7 @@ public class frmModReservas extends javax.swing.JFrame {
         jPanel3.add(dateFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 150, -1));
 
         txtPreciototal.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPreciototalKeyTyped(evt);
             }
@@ -172,6 +178,7 @@ public class frmModReservas extends javax.swing.JFrame {
             }
         });
         txtEstado.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtEstadoKeyTyped(evt);
             }
@@ -250,7 +257,7 @@ public class frmModReservas extends javax.swing.JFrame {
     }//GEN-LAST:event_txtClienteKeyTyped
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtcedulaActionPerformed
 
     private void txtcedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcedulaKeyTyped
@@ -258,7 +265,7 @@ public class frmModReservas extends javax.swing.JFrame {
     }//GEN-LAST:event_txtcedulaKeyTyped
 
     private void txtHabitacionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHabitacionesKeyTyped
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_txtHabitacionesKeyTyped
 
     private void txtPersonasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPersonasKeyTyped
@@ -285,7 +292,7 @@ public class frmModReservas extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEstadoKeyTyped
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_btnActualizarActionPerformed
 
  

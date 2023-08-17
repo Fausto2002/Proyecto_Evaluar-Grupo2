@@ -19,9 +19,9 @@ public class frmModCliente extends javax.swing.JFrame {
         this.txtIdCliente.enable(false);
     }
 
-
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -58,7 +58,10 @@ public class frmModCliente extends javax.swing.JFrame {
         });
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(
+                javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Datos",
+                javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION,
+                new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
@@ -102,6 +105,7 @@ public class frmModCliente extends javax.swing.JFrame {
             }
         });
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtEmailKeyTyped(evt);
             }
@@ -109,6 +113,7 @@ public class frmModCliente extends javax.swing.JFrame {
         jPanel3.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 250, -1));
 
         txtNombres.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNombresKeyTyped(evt);
             }
@@ -116,6 +121,7 @@ public class frmModCliente extends javax.swing.JFrame {
         jPanel3.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 250, -1));
 
         txtIdCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtIdClienteKeyTyped(evt);
             }
@@ -124,6 +130,7 @@ public class frmModCliente extends javax.swing.JFrame {
 
         txtCedula.setEnabled(false);
         txtCedula.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCedulaKeyTyped(evt);
             }
@@ -132,6 +139,7 @@ public class frmModCliente extends javax.swing.JFrame {
 
         txtApellidos.setEnabled(false);
         txtApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtApellidosKeyTyped(evt);
             }
@@ -139,6 +147,7 @@ public class frmModCliente extends javax.swing.JFrame {
         jPanel3.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, 250, -1));
 
         txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTelefonoKeyTyped(evt);
             }
@@ -146,6 +155,7 @@ public class frmModCliente extends javax.swing.JFrame {
         jPanel3.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 250, -1));
 
         txtDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtDireccionKeyTyped(evt);
             }
@@ -159,48 +169,50 @@ public class frmModCliente extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(58, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(88, 88, 88)
+                                                .addComponent(jLabel1))
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(40, 40, 40)
+                                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 342,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addContainerGap(58, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(127, 127, 127)
+                                .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 162,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)));
         jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 262,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 32,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 390));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyTyped
+    private void txtEmailKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtEmailKeyTyped
         char c = evt.getKeyChar();
         if (c == KeyEvent.VK_SPACE) {
             evt.consume();
         }
         if (txtEmail.getText().length() >= 80)
             evt.consume();
-    }//GEN-LAST:event_txtEmailKeyTyped
+    }// GEN-LAST:event_txtEmailKeyTyped
 
-    private void txtNombresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombresKeyTyped
+    private void txtNombresKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtNombresKeyTyped
         char c = evt.getKeyChar();
         if (Character.isLowerCase(c)) {
             evt.setKeyChar(Character.toUpperCase(c));
@@ -210,9 +222,9 @@ public class frmModCliente extends javax.swing.JFrame {
         }
         if (txtNombres.getText().length() >= 30)
             evt.consume();
-    }//GEN-LAST:event_txtNombresKeyTyped
+    }// GEN-LAST:event_txtNombresKeyTyped
 
-    private void txtIdClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIdClienteKeyTyped
+    private void txtIdClienteKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtIdClienteKeyTyped
         char c = evt.getKeyChar();
         String id = txtIdCliente.getText().trim();
         if (!Character.isDigit(c) || id.length() >= 10) {
@@ -220,13 +232,13 @@ public class frmModCliente extends javax.swing.JFrame {
         }
         if (txtIdCliente.getText().length() >= 4)
             evt.consume();
-    }//GEN-LAST:event_txtIdClienteKeyTyped
+    }// GEN-LAST:event_txtIdClienteKeyTyped
 
-    private void txtCedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCedulaKeyTyped
+    private void txtCedulaKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtCedulaKeyTyped
 
-    }//GEN-LAST:event_txtCedulaKeyTyped
+    }// GEN-LAST:event_txtCedulaKeyTyped
 
-    private void txtApellidosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidosKeyTyped
+    private void txtApellidosKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtApellidosKeyTyped
         char c = evt.getKeyChar();
         if (Character.isLowerCase(c)) {
             evt.setKeyChar(Character.toUpperCase(c));
@@ -236,31 +248,31 @@ public class frmModCliente extends javax.swing.JFrame {
         }
         if (txtApellidos.getText().length() >= 30)
             evt.consume();
-    }//GEN-LAST:event_txtApellidosKeyTyped
+    }// GEN-LAST:event_txtApellidosKeyTyped
 
-    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyTyped
+    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtTelefonoKeyTyped
         char c = evt.getKeyChar();
         String telefono = txtTelefono.getText().trim();
         if (!Character.isDigit(c) || telefono.length() >= 10) {
             evt.consume();
         }
-    }//GEN-LAST:event_txtTelefonoKeyTyped
+    }// GEN-LAST:event_txtTelefonoKeyTyped
 
-    private void txtDireccionKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionKeyTyped
+    private void txtDireccionKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtDireccionKeyTyped
         char c = evt.getKeyChar();
         if (Character.isLowerCase(c)) {
             evt.setKeyChar(Character.toUpperCase(c));
         }
-    }//GEN-LAST:event_txtDireccionKeyTyped
+    }// GEN-LAST:event_txtDireccionKeyTyped
 
-    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailActionPerformed
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtEmailActionPerformed
 
-    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizarActionPerformed
-    //buscar solo con el txtfield sin usar boton
+    }// GEN-LAST:event_txtEmailActionPerformed
+
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnActualizarActionPerformed
+
+    }// GEN-LAST:event_btnActualizarActionPerformed
+     // buscar solo con el txtfield sin usar boton
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizar;

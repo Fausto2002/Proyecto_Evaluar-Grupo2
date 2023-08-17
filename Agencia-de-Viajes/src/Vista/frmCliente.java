@@ -71,9 +71,11 @@ public class frmCliente extends javax.swing.JFrame {
             }
         });
         txtBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyReleased(evt);
             }
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyTyped(evt);
             }
@@ -126,6 +128,7 @@ public class frmCliente extends javax.swing.JFrame {
             }
         ));
         tblCliente.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblClienteMouseClicked(evt);
             }
@@ -179,6 +182,7 @@ public class frmCliente extends javax.swing.JFrame {
             }
         });
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtEmailKeyTyped(evt);
             }
@@ -194,6 +198,7 @@ public class frmCliente extends javax.swing.JFrame {
         txtTelefono.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtTelefono.setBorder(null);
         txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTelefonoKeyTyped(evt);
             }
@@ -209,6 +214,7 @@ public class frmCliente extends javax.swing.JFrame {
         txtApellidos.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtApellidos.setBorder(null);
         txtApellidos.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtApellidosKeyTyped(evt);
             }
@@ -229,6 +235,7 @@ public class frmCliente extends javax.swing.JFrame {
         txtDireccion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtDireccion.setBorder(null);
         txtDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtDireccionKeyTyped(evt);
             }
@@ -244,6 +251,7 @@ public class frmCliente extends javax.swing.JFrame {
             }
         });
         txtCedula.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtCedulaKeyTyped(evt);
             }
@@ -264,6 +272,7 @@ public class frmCliente extends javax.swing.JFrame {
         txtNombres.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtNombres.setBorder(null);
         txtNombres.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNombresKeyTyped(evt);
             }
@@ -341,7 +350,6 @@ public class frmCliente extends javax.swing.JFrame {
         }
     }
     private void txtBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBusquedaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtBusquedaActionPerformed
 
     private void tblClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblClienteMouseClicked
@@ -390,7 +398,6 @@ public class frmCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombresKeyTyped
 
     private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtCedulaActionPerformed
 
     private void txtCedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCedulaKeyTyped
@@ -425,7 +432,6 @@ public class frmCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailActionPerformed
 
     private void cb_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cb_buscarActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_cb_buscarActionPerformed
 
 //buscar solo con el txtfield sin usar boton

@@ -81,6 +81,7 @@ public class frmReserva extends javax.swing.JFrame {
             }
         ));
         tblReservas.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblReservasMouseClicked(evt);
             }
@@ -102,9 +103,11 @@ public class frmReserva extends javax.swing.JFrame {
             }
         });
         txtBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyReleased(evt);
             }
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyTyped(evt);
             }
@@ -172,6 +175,7 @@ public class frmReserva extends javax.swing.JFrame {
             }
         });
         txtPreciototal.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPreciototalKeyTyped(evt);
             }
@@ -207,6 +211,7 @@ public class frmReserva extends javax.swing.JFrame {
         txtPersonas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtPersonas.setBorder(null);
         txtPersonas.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtPersonasKeyTyped(evt);
             }
@@ -222,6 +227,7 @@ public class frmReserva extends javax.swing.JFrame {
         txtHabitaciones.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtHabitaciones.setBorder(null);
         txtHabitaciones.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtHabitacionesKeyTyped(evt);
             }
@@ -247,6 +253,7 @@ public class frmReserva extends javax.swing.JFrame {
             }
         });
         txtcedula.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtcedulaKeyTyped(evt);
             }
@@ -262,6 +269,7 @@ public class frmReserva extends javax.swing.JFrame {
         txtCliente.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         txtCliente.setBorder(null);
         txtCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtClienteKeyTyped(evt);
             }
@@ -310,7 +318,6 @@ public class frmReserva extends javax.swing.JFrame {
     }//GEN-LAST:event_txtClienteKeyTyped
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtcedulaActionPerformed
 
     private void txtcedulaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtcedulaKeyTyped
@@ -403,7 +410,7 @@ public class frmReserva extends javax.swing.JFrame {
     }//GEN-LAST:event_tblReservasMouseClicked
 
     private void txtBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBusquedaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_txtBusquedaActionPerformed
 
     private void txtBusquedaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBusquedaKeyReleased
@@ -447,7 +454,6 @@ public class frmReserva extends javax.swing.JFrame {
     }//GEN-LAST:event_btnbackActionPerformed
 
     private void txtPreciototalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPreciototalActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_txtPreciototalActionPerformed
     private void cedulaInput(java.awt.event.KeyEvent evt, String txt, int maxLength) {
         char c = evt.getKeyChar();

@@ -2,5 +2,5 @@ projectKey=CodigoNuevo
 serverUrl=http://localhost:9000
 serverVersion=10.1.0.73491
 dashboardUrl=http://localhost:9000/dashboard?id=CodigoNuevo
-ceTaskId=AYn0LXX_fSC8Svz1g76w
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYn0LXX_fSC8Svz1g76w
+ceTaskId=AYn69E8BWQ9vFgJyewsM
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYn69E8BWQ9vFgJyewsM

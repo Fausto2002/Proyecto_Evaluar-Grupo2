@@ -5,6 +5,8 @@ import Modelo.*;
 import Vista.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JButton;
@@ -20,6 +22,9 @@ public class CtrlCliente implements ActionListener {
     private final ConsultasCliente modC;
     private final frmCliente frmC;
     private final frmModCliente frmMod;
+    private static final Logger logger = Logger.getLogger(CtrlCliente.class.getName());
+    
+    
   /**
    *metodo constructor
    * @param mod
@@ -60,7 +65,7 @@ public class CtrlCliente implements ActionListener {
    * @return
    */
     public static boolean validarCedulatelefono(String cedula) {
-        String regex = "^[0-9]{10}$";
+        String regex = "\\d";
         return cedula.matches(regex);
     }
   /**
@@ -70,23 +75,20 @@ public class CtrlCliente implements ActionListener {
    * guardarCliente() y actualizarCliente(). Esto mejora la legibilidad y el mantenimiento del código, 
    * ya que cada método se encarga de una funcionalidad específica.
    */
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == frmC.btnGuardar) {
-            if (guardarCliente()) {
-                JOptionPane.showMessageDialog(null, "Registro Guardado");
-                limpiar();
-                Listar();
-            }
-        }
-        if (e.getSource() == frmMod.btnActualizar) {
-            if (actualizarCliente()) {
-                JOptionPane.showMessageDialog(null, "Registro Actualizado");
-                frmMod.setVisible(false);
-                Listar();
-            }
-        }
-    }
+  @Override
+  public void actionPerformed(ActionEvent e) {
+
+      if (e.getSource() == frmC.btnGuardar && guardarCliente()) {
+          JOptionPane.showMessageDialog(null, "Registro Guardado");
+          limpiar();
+          Listar();
+      }
+
+      if (e.getSource() == frmMod.btnActualizar && actualizarCliente()) {
+          JOptionPane.showMessageDialog(null, "Registro Actualizado");
+          frmMod.setVisible(false);
+      }
+  }
     private boolean guardarCliente() {
         mod.setCedula(frmC.txtCedula.getText());
         mod.setNombres(frmC.txtNombres.getText());
@@ -154,6 +156,7 @@ public class CtrlCliente implements ActionListener {
     public void Listar() {
         frmC.tblCliente.setDefaultRenderer(Object.class, new Render());
         DefaultTableModel md = new DefaultTableModel() {
+            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -173,7 +176,7 @@ public class CtrlCliente implements ActionListener {
                 frmC.tblCliente.setModel(md);
             }
         } catch (Exception e) {
-            System.out.println(e);
+            logger.log(Level.SEVERE, "Error en Listar", e);
         }
     }
 }

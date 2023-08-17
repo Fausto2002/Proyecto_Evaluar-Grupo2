@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
         private final ConsultasLogin consultasLogin;
         private final FrmLogin frmLogin;
 
-        public CtrlLogin(ConsultasLogin consultasLogin, FrmLogin frmLogin, Usuario usuario) {
+        public CtrlLogin(ConsultasLogin consultasLogin, FrmLogin frmLogin) {
             this.consultasLogin = consultasLogin;
             this.frmLogin = frmLogin;
 

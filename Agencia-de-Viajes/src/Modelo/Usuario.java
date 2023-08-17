@@ -7,7 +7,7 @@ package Modelo;
  */
 public class Usuario {
     private int idUsuario;
-    private String usuario;
+    private String nombreUsuario;
     private String clave;
 
   /**
@@ -31,15 +31,15 @@ public class Usuario {
    * @return
    */
   public String getUsuario() {
-        return usuario;
+        return nombreUsuario;
     }
 
   /**
    *
    * @param usuario
    */
-  public void setUsuario(String usuario) {
-        this.usuario = usuario;
+  public void setUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
   /**

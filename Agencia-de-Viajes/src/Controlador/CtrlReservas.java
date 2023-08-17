@@ -8,6 +8,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -24,6 +27,7 @@ public class CtrlReservas implements ActionListener {
     private final ConsultasReservas cr;
     private final frmReserva frmR;
     private final frmModReservas frmMR;
+    private static final Logger logger = Logger.getLogger(CtrlCliente.class.getName());
  
   /**
    *
@@ -71,13 +75,7 @@ public class CtrlReservas implements ActionListener {
         Date fechaActual = new Date();
 
         // Comparar las fechas
-        if (fechaSeleccionada.after(fechaActual)) {
-            // La fecha seleccionada es a futuro
-            return true;
-        } else {
-            // La fecha seleccionada es anterior o igual a la fecha actual
-            return false;
-        }
+        return fechaSeleccionada.after(fechaActual);
     }
 
   /**
@@ -85,73 +83,89 @@ public class CtrlReservas implements ActionListener {
    * y fechas a métodos separados para mejorar la legibilidad y reutilización del código. 
    * @param e
    */
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == frmR.btnReservar) {
-            if (camposVacios() || !validarFechas()) {
-                JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos correctamente antes de Reservar.");
-            } else {
-                try {
-                    r.setFechaInicio(frmR.dateFechaInicio.getDate());
-                    r.setFechaFin(frmR.dateFechaFin.getDate());
-                    r.setHotel((String) frmR.combohoteles.getSelectedItem());
-                    r.setHabitaciones(Integer.parseInt(frmR.txtHabitaciones.getText()));
-                    r.setPersonas(Integer.parseInt(frmR.txtPersonas.getText()));
-                    r.setCliente(frmR.txtCliente.getText());
-                    r.setCedula(frmR.txtcedula.getText());
-                    r.setPrecioTotal(Double.parseDouble(frmR.txtPreciototal.getText()));
-                    r.setEstado((String) frmR.txtEstado.getSelectedItem());
-
-                    if (validarCedulatelefono(r.getCedula())) {
-                        if (cr.registrar(r)) {
-                            JOptionPane.showMessageDialog(null, "Reserva Realizada. ¡Tenga un buen día!");
-                            limpiar();
-                            Listar();
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Error al realizar la Reserva");
-                        }
-                    } else {
-                        throw new CedulaInvalidaException();
-                    }
-                } catch (CedulaInvalidaException ex) {
-                    JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                }
-            }
-        }
-
-        if (e.getSource() == frmMR.btnActualizar) {
-            if (camposCompletos() || !validarFechas()) {
-                JOptionPane.showMessageDialog(null, "Por favor complete todos los campos antes de Reservar.");
-            } else {
-                try {
-                    r.setIdReserva(Integer.parseInt(frmMR.txtIdReserva.getText()));
-                    r.setFechaInicio(frmMR.dateFechaInicio.getDate());
-                    r.setFechaFin(frmMR.dateFechaFin.getDate());
-                    r.setHotel((String) frmMR.combohoteles.getSelectedItem());
-                    r.setHabitaciones(Integer.parseInt(frmMR.txtHabitaciones.getText()));
-                    r.setPersonas(Integer.parseInt(frmMR.txtPersonas.getText()));
-                    r.setCliente(frmMR.txtCliente.getText());
-                    r.setCedula(frmMR.txtcedula.getText());
-                    r.setPrecioTotal(Double.parseDouble(frmMR.txtPreciototal.getText()));
-                    r.setEstado(frmMR.txtEstado.getText());
-
-                    if (cr.modificar(r)) {
-                        JOptionPane.showMessageDialog(null, "Reserva Actualizada");
-                        frmMR.setVisible(false);
-                        Listar();
-                    } else {
-                        JOptionPane.showMessageDialog(null, "Error al actualizar");
-                    }
-                } catch (NumberFormatException ex) {
-                    try {
-                        throw new ValorNoNumericoException();
-                    } catch (ValorNoNumericoException ex1) {
-                        JOptionPane.showMessageDialog(null, "Error");
-                    }
-                }
-            }
-        }
-    }
+  @Override
+  public void actionPerformed(ActionEvent e) {
+      if (e.getSource() == frmR.btnReservar) {
+          if (camposVacios() || !validarFechas()) {
+              mostrarMensaje("Por favor, complete todos los campos correctamente antes de Reservar.");
+          } else {
+              try {
+                  realizarReserva();
+              } catch (CedulaInvalidaException ex) {
+                  mostrarMensajeError(ex.getMessage());
+              }
+          }
+      }
+  
+      if (e.getSource() == frmMR.btnActualizar) {
+          if (camposCompletos() || !validarFechas()) {
+              mostrarMensaje("Por favor complete todos los campos antes de Reservar.");
+          } else {
+              actualizarReserva();
+          }
+      }
+  }
+  
+  private void realizarReserva() throws CedulaInvalidaException {
+      try {
+          r.setFechaInicio(frmR.dateFechaInicio.getDate());
+          r.setFechaFin(frmR.dateFechaFin.getDate());
+          r.setHotel((String) frmR.combohoteles.getSelectedItem());
+          r.setHabitaciones(Integer.parseInt(frmR.txtHabitaciones.getText()));
+          r.setPersonas(Integer.parseInt(frmR.txtPersonas.getText()));
+          r.setCliente(frmR.txtCliente.getText());
+          r.setCedula(frmR.txtcedula.getText());
+          r.setPrecioTotal(Double.parseDouble(frmR.txtPreciototal.getText()));
+          r.setEstado((String) frmR.txtEstado.getSelectedItem());
+  
+          if (validarCedulatelefono(r.getCedula())) {
+              if (cr.registrar(r)) {
+                  mostrarMensaje("Reserva Realizada. ¡Tenga un buen día!");
+                  limpiar();
+                  Listar();
+              } else {
+                  mostrarMensajeError("Error al realizar la Reserva");
+              }
+          } else {
+              throw new CedulaInvalidaException();
+          }
+      } catch (CedulaInvalidaException ex) {
+          mostrarMensajeError(ex.getMessage());
+      }
+  }
+  
+  private void actualizarReserva() {
+      try {
+          r.setIdReserva(Integer.parseInt(frmMR.txtIdReserva.getText()));
+          r.setFechaInicio(frmMR.dateFechaInicio.getDate());
+          r.setFechaFin(frmMR.dateFechaFin.getDate());
+          r.setHotel((String) frmMR.combohoteles.getSelectedItem());
+          r.setHabitaciones(Integer.parseInt(frmMR.txtHabitaciones.getText()));
+          r.setPersonas(Integer.parseInt(frmMR.txtPersonas.getText()));
+          r.setCliente(frmMR.txtCliente.getText());
+          r.setCedula(frmMR.txtcedula.getText());
+          r.setPrecioTotal(Double.parseDouble(frmMR.txtPreciototal.getText()));
+          r.setEstado(frmMR.txtEstado.getText());
+  
+          if (cr.modificar(r)) {
+              mostrarMensaje("Reserva Actualizada");
+              frmMR.setVisible(false);
+              Listar();
+          } else {
+              mostrarMensajeError("Error al actualizar");
+          }
+      } catch (NumberFormatException ex) {
+          mostrarMensajeError("Error");
+      }
+  }
+  
+  private void mostrarMensaje(String mensaje) {
+      JOptionPane.showMessageDialog(null, mensaje);
+  }
+  
+  private void mostrarMensajeError(String mensaje) {
+      JOptionPane.showMessageDialog(null, mensaje, "Error", JOptionPane.ERROR_MESSAGE);
+  }
 
     private boolean camposVacios() {
         return frmR.dateFechaInicio.getDate() == null ||
@@ -200,6 +214,7 @@ public class CtrlReservas implements ActionListener {
     public void Listar() {
         frmR.tblReservas.setDefaultRenderer(Object.class, new Render());
         DefaultTableModel md = new DefaultTableModel() {
+            @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
@@ -219,7 +234,7 @@ public class CtrlReservas implements ActionListener {
                 frmR.tblReservas.setModel(md);
             }
         } catch (Exception e) {
-            System.out.println(e);
+             logger.log(Level.SEVERE, "Error en Listar", e);
         }
     }
 }

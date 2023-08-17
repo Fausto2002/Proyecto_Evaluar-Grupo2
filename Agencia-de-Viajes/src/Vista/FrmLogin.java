@@ -4,7 +4,7 @@ import Modelo.*;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import static Modelo.Conexion.getConnection;
-import Modelo.ConsultasCliente;
+
 import java.awt.event.KeyEvent;
 
 /**
@@ -71,6 +71,7 @@ public class FrmLogin extends javax.swing.JFrame {
         txtUsuario.setToolTipText("");
         txtUsuario.setBorder(null);
         txtUsuario.addKeyListener(new java.awt.event.KeyAdapter() {
+             @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtUsuarioKeyTyped(evt);
             }
@@ -91,9 +92,11 @@ public class FrmLogin extends javax.swing.JFrame {
             }
         });
         txtContraseña.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtContraseñaKeyPressed(evt);
             }
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtContraseñaKeyTyped(evt);
             }
@@ -137,6 +140,7 @@ public class FrmLogin extends javax.swing.JFrame {
             }
         });
         btnEntrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 btnEntrarKeyPressed(evt);
             }
@@ -189,7 +193,7 @@ public class FrmLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUsuarioKeyTyped
 
     private void txtContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtContraseñaActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_txtContraseñaActionPerformed
 
     private void txtContraseñaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtContraseñaKeyTyped

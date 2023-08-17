@@ -32,7 +32,8 @@ public class frmPagos extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -55,14 +56,14 @@ public class frmPagos extends javax.swing.JFrame {
         tblReservas.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         tblReservas.setForeground(new java.awt.Color(0, 0, 0));
         tblReservas.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
+                },
+                new String[] {
 
-            }
-        ));
+                }));
         tblReservas.addMouseListener(new java.awt.event.MouseAdapter() {
+            @Override
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblReservasMouseClicked(evt);
             }
@@ -77,7 +78,10 @@ public class frmPagos extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel6.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Busqueda ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(
+                javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "Busqueda ",
+                javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION,
+                new java.awt.Font("Dialog", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         txtBusqueda.setBackground(new java.awt.Color(255, 255, 255));
         txtBusqueda.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
@@ -89,9 +93,11 @@ public class frmPagos extends javax.swing.JFrame {
             }
         });
         txtBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
+            @Override
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyReleased(evt);
             }
+            @Override
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBusquedaKeyTyped(evt);
             }
@@ -105,23 +111,26 @@ public class frmPagos extends javax.swing.JFrame {
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(cb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
-        );
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(cb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 195,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(14, Short.MAX_VALUE)));
         jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+                jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(txtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 20,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cb_buscar, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addContainerGap(18, Short.MAX_VALUE)));
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
@@ -147,15 +156,14 @@ public class frmPagos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtBusquedaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBusquedaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtBusquedaActionPerformed
+    private void txtBusquedaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtBusquedaActionPerformed
+    }// GEN-LAST:event_txtBusquedaActionPerformed
 
-    private void txtBusquedaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBusquedaKeyReleased
-        BuscarNuevo(txtBusqueda.getText());//llamando al metodo buscar
-    }//GEN-LAST:event_txtBusquedaKeyReleased
+    private void txtBusquedaKeyReleased(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtBusquedaKeyReleased
+        BuscarNuevo(txtBusqueda.getText());// llamando al metodo buscar
+    }// GEN-LAST:event_txtBusquedaKeyReleased
 
-    private void txtBusquedaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBusquedaKeyTyped
+    private void txtBusquedaKeyTyped(java.awt.event.KeyEvent evt) {// GEN-FIRST:event_txtBusquedaKeyTyped
 
         buscar_box = (String) cb_buscar.getSelectedItem();
         String txt = txtBusqueda.getText().trim();
@@ -163,7 +171,7 @@ public class frmPagos extends javax.swing.JFrame {
 
         switch (buscar_box) {
             case "Seleccione" ->
-                vacio(evt, txt,0); // Limpiar el valor del campo de entrada
+                vacio(evt, txt, 0); // Limpiar el valor del campo de entrada
             case "Cedula" ->
                 cedulaInput(evt, txt, 10);
             case "Hotel" ->
@@ -174,10 +182,10 @@ public class frmPagos extends javax.swing.JFrame {
 
         // Agregar ActionListener al JComboBox para limpiar el JTextField
         cb_buscar.addActionListener((ActionEvent e) -> {
-          // Limpiar el contenido del JTextField
-          txtBusqueda.setText("");
+            // Limpiar el contenido del JTextField
+            txtBusqueda.setText("");
         });
-    }//GEN-LAST:event_txtBusquedaKeyTyped
+    }// GEN-LAST:event_txtBusquedaKeyTyped
 
     private void cedulaInput(java.awt.event.KeyEvent evt, String txt, int maxLength) {
         char c = evt.getKeyChar();
@@ -212,7 +220,7 @@ public class frmPagos extends javax.swing.JFrame {
 
     private CtrlPagos p;
 
-    private void tblReservasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblReservasMouseClicked
+    private void tblReservasMouseClicked(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_tblReservasMouseClicked
         Reserva reserva = new Reserva();
         ConsultasReservas consultasReservas = new ConsultasReservas();
         frmModReservas frmMod = new frmModReservas();
@@ -232,20 +240,21 @@ public class frmPagos extends javax.swing.JFrame {
                     int fila = tblReservas.getSelectedRow();
                     String codigo = tblReservas.getValueAt(fila, 0).toString();
                     if (fila < 0) {
-                        JOptionPane.showMessageDialog(null, "Debe seleccionar un registro de la tabla", "AVISO", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Debe seleccionar un registro de la tabla", "AVISO",
+                                JOptionPane.INFORMATION_MESSAGE);
                     } else {
                         p.Listar();
                     }
                 }
             }
         }
-    }//GEN-LAST:event_tblReservasMouseClicked
+    }// GEN-LAST:event_tblReservasMouseClicked
 
-    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_btnbackActionPerformed
         MenuPrincipal men = new MenuPrincipal();
         this.setVisible(false);
         men.setVisible(true);
-    }//GEN-LAST:event_btnbackActionPerformed
+    }// GEN-LAST:event_btnbackActionPerformed
 
     /**
      *
@@ -271,7 +280,8 @@ public class frmPagos extends javax.swing.JFrame {
             default -> throw new AssertionError();
         }
 
-        model.setColumnIdentifiers(new Object[]{"IdReserva", "Cliente", "Cedula", "Hotel", "Habitaciones", "Personas", "Fecha Inicio", "Fecha Fin", "Precio Total", "Estado", "Boton"});
+        model.setColumnIdentifiers(new Object[] { "IdReserva", "Cliente", "Cedula", "Hotel", "Habitaciones", "Personas",
+                "Fecha Inicio", "Fecha Fin", "Precio Total", "Estado", "Boton" });
         Connection con = getConnection();
         try {
             CallableStatement stmt = con.prepareCall(sql);
@@ -280,15 +290,16 @@ public class frmPagos extends javax.swing.JFrame {
             stmt.execute();
             ResultSet rs = (ResultSet) stmt.getObject(2);
             while (rs.next()) {
-                model.addRow(new Object[]{rs.getInt("IdReserva"), rs.getString("Cliente"), rs.getString("Cedula"), rs.getString("Hotel"),
-                    rs.getInt("Habitaciones"), rs.getInt("Personas"), rs.getDate("FechaInicio"), rs.getDate("FechaFin"), rs.getDouble("PrecioTotal"), rs.getString("Estado"), botonPagar});
+                model.addRow(new Object[] { rs.getInt("IdReserva"), rs.getString("Cliente"), rs.getString("Cedula"),
+                        rs.getString("Hotel"),
+                        rs.getInt("Habitaciones"), rs.getInt("Personas"), rs.getDate("FechaInicio"),
+                        rs.getDate("FechaFin"), rs.getDouble("PrecioTotal"), rs.getString("Estado"), botonPagar });
                 tblReservas.setModel(model);
             }
         } catch (Exception e) {
             System.out.println(e);
         }
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnback;
